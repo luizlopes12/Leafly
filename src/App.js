@@ -45,7 +45,7 @@ const App = () => {
         background = 'bg-night'
     }
   return (
-    <div className='bg-morning'>
+    <div className={background}>
         <Header cityName={data.name} date={date}/>
         <Main data={data}/>
         <Footer/>
