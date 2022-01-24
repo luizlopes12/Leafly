@@ -1,10 +1,11 @@
-## Shopping cart system with fruityvice API
-
+## Weather App with openWeatherMap API
+ 
 ## Gifs
-#### Desktop
-![Desktop](./gif-desktop.gif)
-#### Mobile
-![Mobile](./gif-mobile.gif)
+#### mobile
+![morning](./leafly1.gif)
+![afternoon](./leafly2.gif)
+![night](./leafly3.gif)
+
 
 ### Built with
 
@@ -15,5 +16,4 @@
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Bootstrap](https://getbootstrap.com/) - CSS library
-- [React Bootstrap](https://react-bootstrap.github.io/) - React library
 
