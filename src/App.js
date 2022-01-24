@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { API } from './services/API';
+import './style/style.css'
 import Header from './components/Header';
+import Main from './components/Main';
 const API_KEY = '48593f081e5bf66c347661da3668026e'
 const App = () => {
     const [userCoords, setUserCoords] = useState()
@@ -26,12 +28,14 @@ const App = () => {
         API.get(`/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
         .then((response) => {
             setData(response.data)
+            console.log(response)
         })
         .catch((error)=>console.log(error))
     },[userCoords])
   return (
     <div>
-        <Header weather={data.weather}/>
+        <Header cityName={data.name}/>
+        <Main data={data}/>
     </div>
     );
 };

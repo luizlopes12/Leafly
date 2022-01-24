@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-const Header = ({weather}) => {
-    const [iconCode, setIconCode] = useState()
-    useEffect(()=>{
-      if(!weather){
-        console.log('deu ruim');
-      }else{
-        setIconCode(weather[0].icon)
-      }
-    })
-    console.log(iconCode);
+const Header = ({cityName}) => {
+  let today = new Date();
+  let date = `${today.getDate()}/${today.getMonth()+1}, ${today.getHours()}:${(today.getMinutes()<10?'0':'') + today.getMinutes()}`
   return (
-    <div>
-      
-      <img src={`http://openweathermap.org/img/wn/${!iconCode? '': iconCode}@2x.png`} alt="" />
+    <div className='container-fluid mt-5'>
+      <div className="row-fluid">
+      <div className="locate col-12 text-center "><i className="bi bi-geo-alt-fill"></i> {cityName}</div>
+      <div className="date col-12 text-center ">{date}</div>
+      </div>
     </div>
     );
 };
