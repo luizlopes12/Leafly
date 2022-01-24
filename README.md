@@ -16,5 +16,4 @@
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Bootstrap](https://getbootstrap.com/) - CSS library
-- [React Bootstrap](https://react-bootstrap.github.io/) - React library
 
