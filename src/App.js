@@ -39,7 +39,7 @@ const App = () => {
     let background
     if(today.getHours() < 15){
         background = 'bg-morning'
-    }else if(today.getHours() < 18){
+    }else if(today.getHours() < 19){
         background = 'bg-afternoon'
     }else{
         background = 'bg-night'
