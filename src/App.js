@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { API } from './services/API';
+import Header from './components/Header';
 const API_KEY = '48593f081e5bf66c347661da3668026e'
 const App = () => {
     const [userCoords, setUserCoords] = useState(0)
@@ -28,9 +29,10 @@ const App = () => {
         })
         .catch((error)=>console.log(error))
     },[userCoords])
+    console.log(data.weather);
   return (
     <div>
-
+        <Header weather={data.weather}/>
     </div>
     );
 };
