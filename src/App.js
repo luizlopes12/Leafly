@@ -3,7 +3,7 @@ import { API } from './services/API';
 import Header from './components/Header';
 const API_KEY = '48593f081e5bf66c347661da3668026e'
 const App = () => {
-    const [userCoords, setUserCoords] = useState({lat: '51.5287352', lon:'-0.3817841'})
+    const [userCoords, setUserCoords] = useState()
     const [data, setData] = useState([])
     /*
     ///////////////////////
@@ -12,7 +12,7 @@ const App = () => {
     */
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition(async(position) =>{
-            setUserCoords({lat: await position.coords.latitude, lon: await position.coords.longitude})
+            setUserCoords({lat: position.coords.latitude, lon: position.coords.longitude})
           });
     },[])
     /*
@@ -21,16 +21,14 @@ const App = () => {
     ///////////////////////
     */
     useEffect(async()=>{
-        let latitude = userCoords.lat
-        let longitude = userCoords.lon
+        let latitude = await userCoords.lat
+        let longitude = await userCoords.lon
         API.get(`/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
         .then((response) => {
             setData(response.data)
         })
         .catch((error)=>console.log(error))
     },[userCoords])
-    console.log(data);
-
   return (
     <div>
         <Header weather={data.weather}/>
