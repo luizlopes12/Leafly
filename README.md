@@ -1,10 +1,11 @@
-## Shopping cart system with fruityvice API
-
+## Weather App with openWeatherMap API
+ 
 ## Gifs
-#### Desktop
-![Desktop](./gif-desktop.gif)
-#### Mobile
-![Mobile](./gif-mobile.gif)
+#### mobile
+![morning](./leafly1.gif)
+![afternoon](./leafly1.gif)
+![night](./leafly1.gif)
+
 
 ### Built with
 
