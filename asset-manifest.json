@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Leafly/static/css/main.dda5d298.css",
+    "main.js": "/Leafly/static/js/main.961d4ab5.js",
+    "static/media/bootstrap-icons.woff?": "/Leafly/static/media/bootstrap-icons.38c4d2499557ae0379fd.woff",
+    "static/media/bootstrap-icons.woff2?": "/Leafly/static/media/bootstrap-icons.2b56e79ae5013246de29.woff2",
+    "index.html": "/Leafly/index.html",
+    "main.dda5d298.css.map": "/Leafly/static/css/main.dda5d298.css.map",
+    "main.961d4ab5.js.map": "/Leafly/static/js/main.961d4ab5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dda5d298.css",
+    "static/js/main.961d4ab5.js"
+  ]
+}
