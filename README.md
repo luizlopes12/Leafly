@@ -3,8 +3,8 @@
 ## Gifs
 #### mobile
 ![morning](./leafly1.gif)
-![afternoon](./leafly1.gif)
-![night](./leafly1.gif)
+![afternoon](./leafly2.gif)
+![night](./leafly3.gif)
 
 
 ### Built with
