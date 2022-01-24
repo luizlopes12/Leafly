@@ -1,26 +1,33 @@
 import React, {useState, useEffect} from 'react';
 import { API } from './services/API';
 const API_KEY = '48593f081e5bf66c347661da3668026e'
-const city = 'Registro'
 const App = () => {
+    const [userCoords, setUserCoords] = useState(0)
+    const [data, setData] = useState([])
     /*
     ///////////////////////
-    Searching weather data
+    Getting user coords to use in query 
     ///////////////////////
     */
-    navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position);
-      });
-    const [data, setData] = useState([])
     useEffect(()=>{
-        API.get(`/weather?q=${city}&appid=${API_KEY}`)
+        navigator.geolocation.getCurrentPosition(function(position) {
+            setUserCoords({lat: position.coords.latitude, lon: position.coords.longitude})
+          });
+    },[])
+    /*
+    ///////////////////////
+    Searching weather data by user lat and long
+    ///////////////////////
+    */
+    useEffect(()=>{
+        let latitude = userCoords.lat
+        let longitude = userCoords.lon
+        API.get(`/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
         .then((response) => {
             setData(response.data) 
         })
         .catch((error)=>console.log(error))
-    },[])
-    console.log(data);
-    console.log(data.weather);
+    },[userCoords])
   return (
     <div>
 
