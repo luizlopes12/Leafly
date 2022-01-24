@@ -1,7 +1,7 @@
 ## Weather App with openWeatherMap API
  
 ## Gifs
-#### mobile
+#### They change the background considering the current hour (morning, afternoon and night)
 ![morning](./leafly1.gif)
 ![afternoon](./leafly2.gif)
 ![night](./leafly3.gif)
