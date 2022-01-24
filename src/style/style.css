@@ -7,14 +7,25 @@ body {
   font-family: 'Roboto', sans-serif; 
   /* outline: 1px solid red; */
 }
-body{
+.bg-morning{
     height: 100vh;
     background: rgb(0, 190, 228);
-    background: linear-gradient(180deg, rgb(0, 186, 223) 0%, rgba(0, 206, 134, 0.659) 100%); 
+    background: linear-gradient(315deg, rgb(0, 153, 100) 0%, rgb(0, 172, 206) 100%); 
+}
+.bg-afternoon{
+    height: 100vh;
+    background: rgb(0, 190, 228);
+    background: linear-gradient(315deg, #995214 0%, #291743 74%); 
+}
+.bg-night{
+    height: 100vh;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+
 }
 .locate{
     font-size: 1.1em;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.95);
 }
 .date{
     color: rgba(255, 255, 255, 0.8);
@@ -22,7 +33,8 @@ body{
     font-size: .9em;
 }
 .temp{
-    color: #fff;
+    color: rgb(255, 255, 255, .95);
+    min-height: 66vh;
 }
 .temp img{
     border-radius: 50%;
@@ -40,7 +52,12 @@ body{
 .temp span{
     color: rgba(255, 255, 255, 0.541);
 }
-
+.dev{
+    color: rgba(255, 255, 255, 0.9);
+}
+.dev a{
+    color: rgba(255, 255, 255, 0.9);
+}
 @keyframes float{
     0%{
         transform: translatey(0px);

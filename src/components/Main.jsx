@@ -18,11 +18,11 @@ const Main = ({data}) => {
     }else{
       setIconCode(data.weather[0].icon)
       setTemp(parseInt(data.main.temp - 273.15))
-      setMin(parseInt(data.main.temp_min - 273.15))
+      setMin(parseInt(data.main.temp_min - 283.15))
       setMax(parseInt(data.main.temp_max - 273.15))
       setWind(parseInt(data.wind.speed * 3.6))
       setFeels(parseInt(data.main.feels_like - 273.15))
-      setHumidity(data.main.humidity)
+      setHumidity(parseInt(data.main.humidity - 12))
       setDescription(data.weather[0].description)
     }
   })

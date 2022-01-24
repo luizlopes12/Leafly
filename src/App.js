@@ -3,6 +3,7 @@ import { API } from './services/API';
 import './style/style.css'
 import Header from './components/Header';
 import Main from './components/Main';
+import Footer from './components/Footer'
 const API_KEY = '48593f081e5bf66c347661da3668026e'
 const App = () => {
     const [userCoords, setUserCoords] = useState()
@@ -32,10 +33,22 @@ const App = () => {
         })
         .catch((error)=>console.log(error))
     },[userCoords])
+
+    let today = new Date();
+    let date = `${today.getDate()}/${today.getMonth()+1}, ${today.getHours()}:${(today.getMinutes()<10?'0':'') + today.getMinutes()}`
+    let background
+    if(today.getHours() < 15){
+        background = 'bg-morning'
+    }else if(today.getHours() < 18){
+        background = 'bg-afternoon'
+    }else{
+        background = 'bg-night'
+    }
   return (
-    <div>
-        <Header cityName={data.name}/>
+    <div className='bg-morning'>
+        <Header cityName={data.name} date={date}/>
         <Main data={data}/>
+        <Footer/>
     </div>
     );
 };
